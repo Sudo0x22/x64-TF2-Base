@@ -8,8 +8,7 @@ public:
 	{
 		if (MH_Initialize() != MH_OK)
 			return false;
-
-		Hooks::CSurface_LockCursor::Initialize();
+		
 		Hooks::EngineVGui::Initialize();
 		Hooks::EngineClient::Initialize();
 
