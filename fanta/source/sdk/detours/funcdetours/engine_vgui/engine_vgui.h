@@ -4,12 +4,6 @@
 #include"../../../../features/misc/misc.h"
 #include"../../../main/renderer.h"
 
-namespace Sigs
-{
-	MAKE_SIG(StartDrawing, "vguimatsurface.dll", "55 8B EC 64 A1 ? ? ? ? 6A FF 68 ? ? ? ? 50 64 89 25 ? ? ? ? 83 EC 14", 0x0);
-	MAKE_SIG(FinishDrawing, "vguimatsurface.dll", "55 8B EC 6A FF 68 ? ? ? ? 64 A1 ? ? ? ? 50 64 89 25 ? ? ? ? 51 56 6A 00", 0x0);
-}
-
 namespace Hooks 
 {
 	namespace EngineVGui 
