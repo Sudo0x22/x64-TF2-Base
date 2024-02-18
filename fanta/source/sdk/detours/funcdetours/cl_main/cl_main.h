@@ -21,7 +21,7 @@ namespace Hooks
 		}
 		void Initialize()
 		{
-			const Whitelist::Fn lpWhiteList = reinterpret_cast<Whitelist::Fn>(pOffsets.m_dwCLLoadWhitelist);
+			const Whitelist::Fn lpWhiteList = reinterpret_cast<Whitelist::Fn>(0x00);
 			const ReadPacket::Fn lpReadPacket = reinterpret_cast<ReadPacket::Fn>(0x00);
 
 			if (lpWhiteList)
