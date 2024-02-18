@@ -56,19 +56,3 @@ namespace Hook
 		}
 	};
 }
-
-#define MAKE_HOOK(name, address, type, callconvo, ...) namespace Hooks \
-{ \
-	namespace name \
-	{ \
-		inline Hook::Function Func; \
-		using FN = type(callconvo*)(__VA_ARGS__); \
-		type callconvo Detour(__VA_ARGS__); \
-		inline void Initialize() \
-		{ \
-			Func.Initialize(reinterpret_cast<void*>(address), &Detour); \
-		} \
-	}\
-}
-
-#define ENABLE_HOOK(name, type, callconvo, ...) type callconvo Hooks::name::Detour(__VA_ARGS__)
